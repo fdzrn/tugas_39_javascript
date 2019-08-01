@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tugas 39 | DOM JS</title>
+</head>
+<body>
+	<button type="button" name="button" onclick="tugas39()">Jalankan</button>
+	<br>
+	<br>
+	<hr>
+	<b>Active Element</b> Property : <br>
+	<p id="satu">contoh</p>
+	<hr>
+	<b>addEventListener</b> Property : <br>
+	<p id="dua">contoh</p>
+	<hr>
+	<b>Anchor</b> Property (<a href="#" name="jeruk">Jeruk</a>
+	<a href="#" name="semangka">Semangka</a>) : <br>
+	<p id="tiga">contoh</p>
+	<hr>
+	<script>
+		function tugas39() {
+			let a = document.activeElement.tagName;
+			a = document.getElementById('satu').innerHTML = a;
+			document.addEventListener("click", function(){
+				document.getElementById('dua').innerHTML = "Sukses ! Merubah addEventListener()"; 
+			})
+			let b = document.anchors.length;
+			b = document.getElementById('tiga').innerHTML = b;
+		}
+	</script>
+</body>
+</html>
